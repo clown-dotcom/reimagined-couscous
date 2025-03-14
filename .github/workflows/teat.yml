@@ -1,0 +1,21 @@
+name: test2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: wias
+    runs-on: windows-2022
+    
+    steps:
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://gitlab.com/candycane2/lite_manager_win/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+
+      - name: Connect to LiteManager
+        run: cmd /c show.bat
+
+      - name: Time Counter
+        run: cmd /c loop.bat
