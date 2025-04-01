@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     name: MacOs Cloud PC
-    runs-on: macos-latest
+    runs-on: macos-13
     
     steps:                 
     - name: Enabling RDP Access
