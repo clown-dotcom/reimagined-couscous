@@ -1,11 +1,11 @@
-name: CI
+name: TEST3
 
 on: [push, workflow_dispatch]
 
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: windows-2025
 
     steps:
     - name: Download
